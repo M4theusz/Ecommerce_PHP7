@@ -2,7 +2,7 @@
 
 namespace Hcode;
 
-
+//CLASSE PARA GERAR DINAMICAMENTE O GET E SET
 class Model{
 
 
