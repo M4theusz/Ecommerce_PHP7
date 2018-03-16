@@ -71,7 +71,8 @@ class User extends Model{
 		$_SESSION[User::SESSION] = NULL;
 	}
 
-	
+
+/*------------------------------------------CRUD - INSERT  - UPDATE - DELETE (DE USUARIOS) -----------------------------------------*/	
 	public static function listAll(){
 
 		$sql = new Sql();
@@ -117,7 +118,7 @@ class User extends Model{
 				$sql = new Sql();
 
 				 $results = $sql->select("CALL sp_usersupdate_save(:iduser, :desperson, :deslogin, :despassword, :desemail, :nrphone, :inadmin);", 
-			array(
+				 	array(
 
 			":iduser"=>$this->getiduser(),
 			":desperson"=>$this->getdesperson(),
@@ -145,6 +146,11 @@ class User extends Model{
 
 	}
 
+/*------------------------------------------CRUD - INSERT  - UPDATE - DELETE (USUARIOS) ----------------*/	
+
+
+
+/*---------------------------------------------RECUPERAR A SENHA -----------------------------------------*/
 	public static function getForgot($email){
 
 		$sql = new Sql();
@@ -265,7 +271,19 @@ class User extends Model{
 			));
 
 	}
+
+
+
+	/*------------------------------------------RECUPERAR A SENHA ----------------------------------------------------------------*/
+
+
+
+/*------------------------------------------CRUD - INSERT  - UPDATE - DELETE (CATEGORIAS)-----------------------------------------*/	
+
+
+
 }
+
 
 
 ?>
